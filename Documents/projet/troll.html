@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CONNEXION IMPOSSIBLE</title>
+    <link rel="stylesheet" href="troll_style.css" />
+</head>
+<body>
+    <div id="container" class="grid">
+        <div id="title">CONNEXION IMPOSSIBLE</div>
+
+        <div class="left-panel" aria-label="Console log">
+            access: PERMISSION DENIED <br>
+            &gt; access main security grid <br>
+            access: PERMISSION DENIED...and... <br>
+            <div class="magic-word"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="popup-window" id="popup">
+                <div class="popup-title-bar" id="popupTitle">System Error</div>
+                <div class="popup-content">
+                    <img src="https://raw.githubusercontent.com/Petpetdu51/video/refs/heads/main/Ahahahreal.webp" alt="Gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const magicWordContainer = document.querySelector('.magic-word');
+            const linesCount = 40; // plus de lignes
+            let currentLine = 0;
+
+            function addLine() {
+                if (currentLine < linesCount) {
+                    magicWordContainer.textContent += "YOU DIDN'T SAY THE MAGIC WORD!\n";
+                    magicWordContainer.scrollTop = magicWordContainer.scrollHeight;
+                    currentLine++;
+                    setTimeout(addLine, 150);
+                }
+            }
+
+            addLine();
+
+            // Drag popup
+            const popup = document.getElementById('popup');
+            const titleBar = document.getElementById('popupTitle');
+            let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            titleBar.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                const rect = popup.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                titleBar.style.cursor = 'grabbing';
+                e.preventDefault();
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                titleBar.style.cursor = 'grab';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                popup.style.left = (e.clientX - offsetX) + 'px';
+                popup.style.top = (e.clientY - offsetY) + 'px';
+                popup.style.position = 'fixed'; // Assure bien la position fixed
+            });
+
+            // Bloque toutes les interactions clavier, souris droite, etc.
+            window.addEventListener('keydown', e => e.preventDefault());
+            window.addEventListener('contextmenu', e => e.preventDefault());
+            window.addEventListener('mousedown', e => {
+                if (e.button !== 0) e.preventDefault();
+            });
+
+            // Empêche retour arrière
+            history.pushState(null, null, location.href);
+            window.onpopstate = () => history.go(1);
+        };
+    </script>
+    <audio autoplay loop>
+        <source src="https://github.com/Petpetdu51/video/raw/main/ah-ah-ah-101soundboards.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas la balise audio.
+    </audio>
+
+
+
+</body>
+</html>
