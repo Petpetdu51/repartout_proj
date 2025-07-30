@@ -7,7 +7,10 @@ Video
 
 ---
   
-Pour que tout fonctionne correctement, il faut bien retirer les points-virgules `;` devant certaines lignes (dans le fichier de configuration `php.ini`) pour les activer, et ajouter le chemin où se trouvent les DLL.  
+Pour que tout fonctionne correctement, il faut bien retirer les points-virgules `;` devant extension_dir comme indiqué (dans le fichier de configuration `php.ini`) pour les activer, et ajouter le chemin où se trouvent les DLL.  
+![Image 4](https://github.com/user-attachments/assets/ed2eb579-4462-44c0-a385-b4b2042f0e3a)  
+![Image 5](https://github.com/user-attachments/assets/e1a862eb-ee8a-49c1-8ce1-ecd4fe8cae02)  
+![Image 6](https://github.com/user-attachments/assets/5a4a55eb-0cbb-4ecc-be77-60a4a89846ba)
 
 Voici un exemple de configuration illustré :  
 
