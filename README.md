@@ -9,12 +9,12 @@ Video
   
 Pour que tout fonctionne correctement, il faut bien retirer les points-virgules `;` devant extension_dir comme indiqué (dans le fichier de configuration `php.ini`) pour les activer, et ajouter le chemin où se trouvent les DLL (sur les images c'est mon chemin).  
 ![Image 4](https://github.com/Petpetdu51/video/blob/main/extension_dir1.png)  
-![Image 5](https://github.com/user-attachments/assets/e1a862eb-ee8a-49c1-8ce1-ecd4fe8cae02)  
-![Image 6](https://github.com/user-attachments/assets/5a4a55eb-0cbb-4ecc-be77-60a4a89846ba)
+![Image 5](https://github.com/Petpetdu51/video/blob/main/extension_dir2.png) 
+![Image 6](https://github.com/Petpetdu51/video/blob/main/extension_dir3.png)
 
 Voici un exemple de configuration illustré :  
 
-![Configuration](https://github.com/user-attachments/assets/ba05fd7c-7e1b-4885-83a4-42b036226ab0)  
+![Configuration](https://github.com/Petpetdu51/video/blob/main/fichiers_dll.png)
 
 ---
 
